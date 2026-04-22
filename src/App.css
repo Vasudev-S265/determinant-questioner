@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  min-height: 100vh;
+  background-image: url('/heart.png.jpg');
+  background-size: 80px;
+  background-repeat: repeat;
+  background-color: #ffb6c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+
+}
+
+.app-container{
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 8px 32px rgba(255, 100, 130, 0.2 );
+  min-width: 340px;
+}
+
+.question{
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: #db1331;
+  text-align: center;
+  text-shadow: 2px 2px 0px rgba(255, 150, 170, 0.5);
+  letter-spacing: 2px;
+}
+
+.button-row{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.pixel-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s;
+  image-rendering: pixelated;
+}
+
+.pixel-btn:hover{
+  transform: scale(1.1);
+}
+
+.pixel-btn:active{
+  transform: scale(0.95);
+}
+
+.pixel-btn img{
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.nooo-text{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #cc2952;
+  text-align: center;
+  text-shadow: 2px 2px 0px rgba(255, 150, 170, 0.5);
+  min-height: 48px;
+}
+
+.explosion-gif{
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+}
+
+.yes-page{
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.yes-card{
+  position: relative;
+  background-color: rgba(255,255,255,0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 8px 32px rgba(255,100, 130, 0.2);
+
+}
+
+.yes-card img{
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  image-rendering: pixelated;
+}
+
+.yes-text{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #cc2952;
+  text-shadow: 2px 2px 0px rgba(255, 150, 170, 0.5);
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+.yes-subtext{
+  font-size: 1rem;
+  color: #888;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.back-btn{
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 107, 138, 0.2);
+  color: #cc2952;
+  border: 2px solid #cc2952;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+  letter-spacing: 1px;
+}
+
+.back-btn:hover{
+  background: rgba(255, 107, 138, 0.5);
+  transform: scale(1.1);
+}
+
+.back-btn:active{
+  transform: scale(0.95);
+}
