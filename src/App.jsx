@@ -8,6 +8,7 @@ function App(){
   const[noExploding, setNoExploding]=useState(false);
   const[cryingGif, setCryingGif]=useState(false);
   const[questiongif, setQuestionGif]=useState(true);
+  const[smirkgif, setSmirkgif]=useState(false);
 
   function handleNo(){
     const newCount=noCount+1
@@ -17,6 +18,8 @@ function App(){
 
     if (newCount>=10){
       setNoExploding(true);
+      setSmirkgif(true);
+      setCryingGif(false);
       setTimeout(()=>{
         setNoExploding(false);
       }, 1300);
@@ -29,7 +32,8 @@ function App(){
         setCryingGif(false);
         setNoCount(0);
         setNoExploding(false);
-        setQuestionGif(true);}}
+        setQuestionGif(true)
+        setSmirkgif(false);}}
         />
       );
       }
@@ -47,6 +51,11 @@ function App(){
         <div className="gif-overlay">
         <img src="cat-rose.gif" alt="Rose"/>
         </div>
+        )}
+        {smirkgif &&(
+          <div className="gif-overlay">
+            <img src="cat-smirk.png" alt="smirk"/>
+          </div>
         )}
         <p className="question">Do you Like me?? 🥺</p>
         <div className="button-row">
@@ -72,7 +81,9 @@ function App(){
         )}
 
         {noCount>=10 &&(
+          <>
           <p className="nooo-text">Now you have to click yes!</p>
+          </>
         )}
 
       </div>
